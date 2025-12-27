@@ -4,7 +4,7 @@
   "scripts": {
     "build": "vite build --mode client && vite build",
     "prod:deploy": "npm run build && wrangler deploy --minify src/index.tsx",
-    "prod:migration:apply": "wrangler d1 migrations apply melody-auth --remote",
+    "prod:migration:apply": "wrangler d1 migrations apply auth --remote",
     "prod:secret:generate": "node ./src/scripts/generate-secret.cjs prod",
     "prod:secret:clean": "node ./src/scripts/clean-secret.cjs prod",
     "dev:start": "vite --port 8787",
